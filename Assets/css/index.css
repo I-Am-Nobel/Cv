@@ -1,0 +1,75 @@
+body{
+    padding: 10px;
+}
+#activePage{
+   background: radial-gradient(circle,rgb(45, 223, 9),rgb(146, 233, 6),rgb(229, 255, 0)) ;
+}
+i{
+    color:rgb(6, 3, 48)
+}
+.home,.project,.contact{
+    /* display: inline-block; */
+    font-size: larger;
+    background: radial-gradient(circle,rgb(56, 204, 27),rgb(33, 177, 14),rgb(45, 148, 22)) ;
+    margin-left: 30px;
+    padding: 10px;
+    text-align: center;
+    
+}
+.home :hover,.project :hover,.contact :hover{
+    
+    /* background-color: #a31414; */
+    color: rgb(18, 253, 253);
+}
+.home{
+    margin-left: 0px;
+}
+@media (max-width:520px) {
+    .home,.project,.contact{
+    margin-left: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-align: center;
+
+}
+/* nav ul li a{
+    font-size: 13px;
+} */
+}
+@media (max-width:423px) {
+    .home,.project,.contact{
+    margin-left: 5px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    text-align: center;
+
+}
+i{
+    display: none;
+}
+/* nav ul li a{
+    font-size: 11px;
+} */
+}
+/*  */
+    .cv ul{list-style: none;}
+    .cv ul li{list-style: none; margin-bottom: 15px;}
+    .cv i{
+        font-size: 20px;
+        color: rgb(0, 0, 0);
+    }
+   /* nav */
+
+.divHeader a{
+    text-decoration: none;
+    color: rgb(5, 5, 65);
+    }
+
+@media (min-width: 740px) {
+.divHeader{
+    padding: 17px;
+    }
+}
+.Tech li {
+    margin-left: 40px;
+}
