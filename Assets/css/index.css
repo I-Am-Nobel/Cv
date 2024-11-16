@@ -1,5 +1,6 @@
 body{
     padding: 10px;
+    background-color: aqua;
 }
 #activePage{
    background: radial-gradient(circle,rgb(45, 223, 9),rgb(146, 233, 6),rgb(229, 255, 0)) ;
@@ -44,12 +45,9 @@ i{
     text-align: center;
 
 }
-i{
+.divHeader i{
     display: none;
 }
-/* nav ul li a{
-    font-size: 11px;
-} */
 }
 /*  */
     .cv ul{list-style: none;}

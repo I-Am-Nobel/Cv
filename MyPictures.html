@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>profil picture</title>
+    <link rel="stylesheet" href="./Assets/css/index.css">
+    <link rel="stylesheet" href="./Assets/img/icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="./Assets/css/bootstrap.min.css">
+</head>
+<style>
+    .dwn{
+        justify-content: space-between;
+    }
+    .img-parent{
+       max-width: 220px;
+        border: 0.2px solid #bebdbd;
+        margin: 10px;
+    }
+    .dlwdPic :hover{
+        color: blue;
+        cursor: pointer;
+    }
+    @media (max-width:527px) {
+    .img-parent{
+        max-width:100% ;
+        background-color: #c6db09;
+    }
+
+}
+</style>
+
+<body>
+    <div class="MainDiv sticky-top  d-flex"
+             style=" width: 100%;
+           background: radial-gradient(ellipse,rgb(31, 196, 133),#37d8bdd5,#3eb67ee8);        
+            ">
+                <!-- <i 
+                style="font-size: xx-large;"
+                class="bi bi-arrow-left fs-6"></i> -->
+                <img class="GoBack" 
+                style="margin-left: 40px;"
+                src="Assets\img\icons\arrow-left.svg" width="30" alt="">
+                
+            </div>
+    
+            <div class="container d-flex flex-wrap bg-primary justify-content-center"
+            style="  background: radial-gradient(ellipse,#0408ff8e,#fc27015d,#e6ff0281);"
+            >
+            <div style="width: 100%;">
+                <h1 style="text-align: center;" class="mt-3">I Am Nobel</h1>
+            </div>
+                <!--  -->
+                
+              
+              <!-- FIN -->
+              
+    </div>
+    <script>
+        
+       // Liste des proprietés  
+const Mypic = [  
+    {  
+        ImgSrc: './Assets/img/1729892320275-IMG-20240927-WA0237~2.jpg',  
+        Legend: 'Photo prise en Octobre 2024 à Mirador, Butembo/ RDC'  
+    },  
+    {  
+        ImgSrc: 'Assets/img/1731710610273.jpg',  
+        Legend: 'Avec des amis, un jours de 2021'  
+    },  
+    {  
+        ImgSrc: './Assets/img/1731710653487.jpg',  
+        Legend: '2021, stage au BECNK, Butembo/ RDC'  
+    },  
+    {  
+        ImgSrc: 'Assets/img/1731710556692.jpg',  
+        Legend: "Juin 2021 lors d'un entrainement de football."  
+    },  
+    {  
+        ImgSrc: 'Assets/img/1731710804208.jpg',  
+        Legend: "Visite chez G.A.B un jours de l'année 2020"  
+    },  
+    {  
+        ImgSrc: 'Assets/img/1731710896512.jpg',  
+        Legend: "2023, au site Mirador de l'UAC Butembo."  
+    },  
+    {  
+        ImgSrc: 'Assets/img/1731710908457.jpg',  
+        Legend: 'La preuve que je suis 500% fan de Barcelone (:'  
+    }  
+];  
+
+Mypic.forEach((img, indx) => {  
+    const imgBoucle = document.createElement("div");  
+    imgBoucle.innerHTML = `  
+        
+        <div class="img-parent rounded px-2"  
+            style="background: linear-gradient(#fff,#05b105c4,#7e7e7e8e);">  
+            <div class="container d-flex flex-wrap rounded-top dwn">  
+                <i style="cursor: pointer;" class="OpenDwn bi bi-list fs-2 text-dark"></i>  
+            </div>  
+
+            <div class="DownloadMenu container   flex-wrap rounded-top dlwn"  
+                style="display: none;">  
+                <div class="DownloadPic dlwdPic d-flex"> <i class="bi bi-download"></i> <p style="margin-left: 10px;">Telecharger la photo</p></div>  
+            </div>  
+            <figure>  
+                <img class="img-fluid rounded" src="${img.ImgSrc}" alt="">  
+                <figcaption>  
+                    <div class="container d-flex flex-wrap text-dark mt-2">  
+                        <i class="bi bi-clock-history fs-6"></i><p class="msi-2" style="font-size: small;">${img.Legend}</p>  
+                    </div>  
+                </figcaption>  
+            </figure>  
+        </div>  
+    `;  
+
+    const imgParent = document.querySelector('.container');  
+    imgParent.appendChild(imgBoucle);  
+
+    const openDwn = imgBoucle.querySelector('.OpenDwn');  
+    openDwn.addEventListener('click', () => {  
+        const downloadMenu = imgBoucle.querySelector('.DownloadMenu');  
+        downloadMenu.style.display == 'flex' ? downloadMenu.style.display = 'none' : downloadMenu.style.display = 'flex';  
+    });  
+
+    const downloadPic = imgBoucle.querySelector('.DownloadPic');  
+    downloadPic.addEventListener('click', () => {  
+        const link = document.createElement('a');  
+        const pic = imgBoucle.querySelector('img');  
+        link.href = pic.src;  
+        link.download = img.ImgSrc.split('/').pop();  
+        link.click();  
+    });  
+});  
+
+const GoBack = document.querySelector('.GoBack');  
+GoBack.addEventListener('click', () => {  
+    window.history.back()  
+});    </script>
+</body>
+
+</html>

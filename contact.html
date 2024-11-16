@@ -19,6 +19,10 @@ background-color: rgba(96, 230, 6, 0.521);
 position: relative; 
  z-index: 2000 ;
 }
+.social-media i{
+    font-size: 50px;
+    color: rgb(9, 4, 54);
+}
 </style>
 <body>
     <div 
@@ -46,7 +50,76 @@ position: relative;
         </div>
 
         <div>
-            
+            <div class="container">  
+                <h3 class="title"> Vous pouvez me contacter par les moyens suivants :</h3>   
+                <div class="social-media d-flex flex-wrap">  
+                  <a class="btn btn-link" href="https://www.linkedin.com/in/jonobel-musonga-4380ba339?trk=contact/" target="_blank">  
+                    <i style="color: rgb(17, 100, 196);" class="bi bi-linkedin "></i>  
+                      
+                  </a>    
+                  <a class="btn btn-link" href="https://www.facebook.com/JosueNobel" target="_blank">  
+                    <i style="color: blue;" class="bi bi-facebook "></i>  
+                      
+                  </a>  
+                  <a class="btn btn-link" href="https://www.instagram.com/jonobel" target="_blank">  
+                    <i style="color: rgb(243, 28, 64);" class="bi bi-instagram "></i>  
+                      
+                  </a>  
+                  <a class="btn btn-link" href="https://www.github.com/I-Am-Nobel" target="_blank">  
+                    <i style="color: rgb(0, 0, 14);" class="bi bi-github "></i>  
+                      
+                  </a>  
+                  <a class="btn btn-link" href="jonobelmusonga@gmail.com">  
+                    <i class="bi bi-envelope "></i>  
+                      
+                  </a>   
+                  <a class="btn btn-link" href="https://wa.me/+243851780126" target="_blank">  
+                    <i style="color: rgb(0, 175, 0);" class="bi bi-whatsapp "></i>  
+                      
+                  </a>  
+                  <a class="btn btn-link" href="https://t.me/JO_NOBEL" target="_blank">  
+                    <i style="color: rgb(21, 140, 187);" class="bi bi-telegram "></i>  
+                      
+                  </a> 
+                  <a class="btn btn-link" href="https://youtube.com/@jo_nobel?si=ChE9roMf79LwP_r1" target="_blank">  
+                    <i style="color: red;" class="bi bi-youtube "></i>  
+                      
+                  </a> 
+                  <div class="btn btn-link "
+                  style="text-decoration: none; font-size: medium;color: rgb(4, 54, 8);;"
+                  > 
+                    <i class="bi bi-phone "
+                    style="color: rgb(5, 2, 39);"
+                    ></i>
+                    <small id="number" value="+243 851 780 126" style="font-size: medium;">+243 851 780 126</small>  
+                    <i id="copy" class="bi bi-copy " style="font-size: medium;"
+                    
+                    ></i>  
+                      <small id="copier" style="color: rgb(4, 54, 8); font-size: medium; display: none;">Copié</small>
+                </div>  
+                </div>  
+              </div>  
         </div>
+        <script>
+            function copierTexte(texte) {  
+                        const input = document.createElement('textarea');  
+                        input.value = texte;  
+                        document.body.appendChild(input);  
+                        input.select();  
+                        document.execCommand('copy');  
+                        document.body.removeChild(input);  
+                }
+            const number=document.getElementById('copy')
+            number.addEventListener('click',()=>{
+                const num =document.getElementById('number')
+                copierTexte(num.getAttribute('value'))
+                const copier = document.getElementById('copier')
+                copier.style.display='inline-block'
+                setTimeout(() => {
+                    copier.style.display='none'
+                }, 2000);
+
+            })
+        </script>
 </body>
 </html>

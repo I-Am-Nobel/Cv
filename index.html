@@ -21,7 +21,18 @@ background-color: rgba(96, 230, 6, 0.521);
 position: relative; 
  z-index: 2000 ;
 }
-
+.galerie{
+    border: 0.4px solid green;
+    padding: 5px;
+    margin-bottom: 15px;
+    color: green;
+}
+.imgFig .galerie :hover{
+    color: rgb(10, 240, 2);
+}
+.imgV{
+    margin-left: 15px;
+}
 </style>
 <body>
     <div
@@ -51,14 +62,10 @@ position: relative;
     
     <div class=" cv">
             <div >
-            <h4>Presentation</h4>
+            <h6 style="text-align: center;" >Presentation</h6>
            
             <ul>
-                <li>
-                    
-                        <img class="rounded" width="100" height="100" src="./Assets/img/1729892320275-IMG-20240927-WA0237~2.jpg" alt="">
-                   
-                </li>
+                
                 <li> <i class="bi bi-person" width="200" height="200"></i> Noms : <span>Josué Nobel Musonga</span> </li>
                 <li><i class="bi bi-" width="20" height="20">
                     <?xml version="1.0" encoding="UTF-8"?>
@@ -76,77 +83,109 @@ position: relative;
 
                     Niveau: 3iem année du premier cycle (L3 en LMD), 2024-2025</li>  
                 </li>
+                <li class="imgFig">      
+                    <figure >                       
+                      <img class="rounded imgV" width="100" height="100" src="./Assets/img/1729892320275-IMG-20240927-WA0237~2.jpg" alt="">
+                    <figcaption>   
+                      <br>
+                        <a href="./MyPictures.html" class="rounded galerie" style=" text-decoration: none;">
+                          <i class="bi bi-images"></i>
+                          Voir la galerie photo</a>
+                    </figcaption>
+                    </figure>  
+              </li>
             </ul>
             </div>
             <div>
-                <h4>
+                <h6 style="text-align: center;">
                     Languages de programmation et Technologies
-                </h4>
+                </h6>
                 <div class="container">
-                    <h6 class="text-info">
+                    <p style="color: rgb(184, 184, 184);">
                         Les barres de progression expriment le niveau d'apprentissage des bases dans ces technologies.
-                    </h6>
+                        et non la comprehension de la technologie entiere!
+                    </p>
                 </div>
                 <div  class="   py-3 ">
                 <ul class=" Tech">
                     <li>
                         <i class="bi bi-"></i> HTML
                     </li>
-                    <div class="progress mb-3" role="progressbar" aria-label="success example with label" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
-                        <div class="progress-bar bg-success w-100">100%</div>
+                    <div class="progress mb-3" role="progressbar" aria-label="success  with label" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                        <div class="progress-bar  w-75"
+                        style="background-color: rgb(37, 212, 21);"
+                        >75%</div>
                       </div>
                     <li>
                         <i class="bi bi-"></i>  CSS
                     </li>
-                    <div class="progress mb-3" role="progressbar" aria-label="success example with label" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
-                        <div class="progress-bar bg-success w-100">100%</div>
+                    <div class="progress mb-3" role="progressbar" aria-label="success  with label" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                        <div class="progress-bar  w-75"
+                        style="background-color: rgb(37, 212, 21);"
+                        >75%</div>
                       </div>
                     <li>
                         <i class="bi bi-"></i> Bootstrapp
                     </li>
-                        <div class="progress mb-3" role="progressbar" aria-label="Success example with label" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
-                            <div class="progress-bar bg-danger w-50">50%</div>
+                        <div class="progress mb-3" role="progressbar" aria-label="Success  with label" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+                            <div class="progress-bar w-50"
+                            style="background-color: rgb(8, 124, 14);"
+                            >50%</div>
                         </div>
                     <li>
                         <i class="bi bi-"></i> JavaScript
                     </li>
-                    <div class="progress mb-3" role="progressbar" aria-label="Success example with label" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
-                        <div class="progress-bar bg-success w-100">100%</div>
+                    <div class="progress mb-3" role="progressbar" aria-label="Success  with label" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                        <div class="progress-bar w-75"
+                        style="background-color: rgb(37, 212, 21);"
+                        >75%</div>
                     </div>
                     <li>
                         <i class="bi bi-"></i> React
                     </li>
-                    <div class="progress mb-3" role="progressbar" aria-label="Success example with label" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
-                        <div class="progress-bar bg-success w-75">75%</div>
+                    <div class="progress mb-3" role="progressbar" aria-label="Success  with label" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                        <div class="progress-bar w-75"
+                        style="background-color: rgb(37, 212, 21);"
+                        >75%</div>
                     </div>
                     <li>
                         <i class="bi bi-"></i> React-Native
                     </li>
-                    <div class="progress mb-3" role="progressbar" aria-label="Success example with label" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
-                        <div class="progress-bar bg-warning w-50">50%</div>
+                    <div class="progress mb-3" role="progressbar" aria-label="Success  with label" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+                        <div class="progress-bar  w-50"
+                        style="background-color: rgb(8, 124, 14);"
+                        >50%</div>
                     </div>
                     <li>
                         <i class="bi bi-"></i> Node Js
                     </li>
-                    <div class="progress mb-3" role="progressbar" aria-label="Success example with label" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
-                        <div class="progress-bar bg-success w-100">100%</div>
+                    <div class="progress mb-3" role="progressbar" aria-label="Success  with label" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                        <div class="progress-bar  w-75"
+                        style="background-color: rgb(37, 212, 21);"
+                        >75%</div>
                     </div>
                     <li>
                         <i class="bi bi-"></i> Arduino (Cpp)
                     </li>
-                    <div class="progress mb-3" role="progressbar" aria-label="Success example with label" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
-                        <div class="progress-bar bg-success w-100">100%</div>
+                    <div class="progress mb-3" role="progressbar" aria-label="Success  with label" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                        <div class="progress-bar  w-75"
+                        style="background-color: rgb(37, 212, 21);"
+                        >75%</div>
                     </div>
                     <li>
                         <i class="bi bi-"></i> TensorFlow
                     </li>
-                    <div class="progress mb-3" role="progressbar" aria-label="Success example with label" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                        <div class="progress-bar bg-success w-25">25%</div>
+                    <div class="progress mb-3" role="progressbar" aria-label="Success  with label" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                        <div class="progress-bar  w-25"
+                        style="background-color: rgb(2, 43, 4);"
+                        >25%</div>
                     </div>
                 </ul>
             </div>
         </div>
-            <h4>Autres passions</h4>
+            <h4
+            style="text-align: center;"
+            >Autres passions</h4>
             <ul class=" d-flex flex-wrap   py-3 ">
                 <li
                 style="margin-right: 40px;"
@@ -160,8 +199,7 @@ position: relative;
                         </g>
                         </svg>
                 
-                </i> Football (joue en amateur) </li>
-                <li><i></i> Electronique</li>  
+                </i> Football (joue en amateur) </li> 
                 </li>
             </ul>
             </div>
