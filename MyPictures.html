@@ -14,6 +14,7 @@
     }
     .img-parent{
        max-width: 220px;
+       height: 400px;
         border: 0.2px solid #bebdbd;
         margin: 10px;
     }
@@ -24,6 +25,7 @@
     @media (max-width:527px) {
     .img-parent{
         max-width:100% ;
+        height: auto;
         background-color: #c6db09;
     }
 
@@ -94,7 +96,7 @@ Mypic.forEach((img, indx) => {
     const imgBoucle = document.createElement("div");  
     imgBoucle.innerHTML = `  
         
-        <div class="img-parent rounded px-2"  
+        <div  class="img-parent rounded px-2"  
             style="background: linear-gradient(#fff,#05b105c4,#7e7e7e8e);">  
             <div class="container d-flex flex-wrap rounded-top dwn">  
                 <i style="cursor: pointer;" class="OpenDwn bi bi-list fs-2 text-dark"></i>  
