@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projet</title>
+    <link rel="stylesheet" href="./Assets/css/index.css">
+    <link rel="stylesheet" href="./Assets/img/icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="./Assets/css/bootstrap.min.css">
+</head>
+<style>
+    .dwn{
+        justify-content: space-between;
+    }
+    .vid-parent{
+       max-width: 400px;
+       max-height: 420px;
+        border: 0.2px solid #bebdbd;
+        margin: 10px;
+        /* display: flex; */
+        justify-content: center;
+        /* background-color: 'red'; */
+    }
+    .vid{
+        width: 100%;
+       max-height: 400px;
+    }
+    .dlwdPic :hover{
+        color: blue;
+        cursor: pointer;
+    }
+    @media (max-width:527px) {
+        .vid-parent{
+        max-width:100% ;
+        height: auto;
+        background-color: #c6db09;
+        margin-top: 10px;
+    }
+}
+    @media (max-width:430px) {
+        .vid-parent{
+        max-width:290px ;
+        height: auto;
+        background-color: #c6db09;
+        margin-top: 10px;
+    } }
+    @media (max-width:314px) {
+        .vid-parent{
+        max-width:240px ;
+        height: auto;
+        background-color: #c6db09;
+        margin-top: 10px;
+    }
+
+}
+</style>
+<body>
+    
+    <div class="MainDiv sticky-top  d-flex"
+    style=" width: 100%;
+  background: radial-gradient(ellipse,rgb(31, 196, 133),#37d8bdd5,#3eb67ee8);        
+   ">
+  
+       <img class="GoBack" 
+       style="margin-left: 40px;"
+       src="Assets\img\icons\arrow-left.svg" width="30" alt="">
+       
+   </div> 
+
+   <div class="mt-2 rounded container d-flex flex-wrap bg-primary justify-content-center"
+   style="  background: radial-gradient(ellipse,#0408ff8e,#fc27015d,#e6ff0281);"
+   >
+   <div class="" style="width: 100%; padding-top: 10px; padding-bottom: 10px;">
+       <h4 style="text-align: center;" >Jo_Nobel <i class="bi bi-file-play-fill"></i> </h4>
+   </div>
+    </div>
+    <div class="Videos rounded container d-flex flex-wrap bg-primary justify-content-center">
+        <div></div>
+
+    </div>
+</body>
+
+<script>
+    const Mypic = [  
+    {  
+        ImgSrc: './Assets/img/projets/Nobel_s_Project_Connected_Farm.png',  
+        Legend: 'Ce projet vise a creer une plateforme permettant a rendre une ferme completement connecté. <br> <span style="font-weight:bold">Technologies utilisés</span> : Node.js,express,React,MongoDb,Socket.io et d\'autres technologies.',
+        VidSrc: './Assets/Videos/FermeConnecté.mp4',  
+        ZipVidSrc:'./Assets/FichiersZip/ProjetFermeConnecté_By_Nobel.rar',
+        ViewVid:'./Video.html'
+    }
+];  
+
+Mypic.forEach((img, indx) => {  
+    const imgBoucle = document.createElement("div");  
+    imgBoucle.innerHTML = `  
+        
+        <div  class="vid-parent  rounded px-2 "  
+            style="background: linear-gradient(#fff,#05b105c4,#7e7e7e8e);">  
+            <div class="container d-flex flex-wrap justify-content-space-between rounded-top dwn">  
+                <p>
+                </p>
+                <i style="cursor: pointer;" class="OpenDwn bi bi-list fs-2 text-dark"></i>  
+            </div>  
+
+            <div class="DownloadMenu container   rounded dlwn"  
+                style="display: none; background-color:#ccc">  
+                <div class="DownloadVid dlwdPic d-flex"> <i class="bi bi-download"></i>  <i class="bi bi-file-play"></i> <p style="margin-left: 10px;">Telecharger Video</p></div>  
+                <div class="DownloadZip dlwdPic d-flex"> <i class="bi bi-download"></i>  <i class="bi bi-file-zip"></i> <p style="margin-left: 10px;">Telecharger video compressé</p></div> 
+            </div> 
+            <p
+            style="text-align:center"
+            >Cliquez la photo pour lire la video</p> 
+            <div
+            class=' justify-content-center d-flex'
+            >  
+            
+            <a href=${img.ViewVid}>
+                <img class="vid img-fluid " src="${img.ImgSrc}" alt="">  
+            </a>  
+            </div> 
+            <div>  
+                    <div class="container d-flex flex-wrap text-dark mt-2">  
+                        
+                        <p class="msi-2" style="font-size: small;">${img.Legend}</p>  
+                    </div>  
+                </div>   
+        </div>  
+    `;  
+
+    const imgParent = document.querySelector('.Videos');  
+    imgParent.appendChild(imgBoucle);  
+
+    const openDwn = imgBoucle.querySelector('.OpenDwn');  
+    openDwn.addEventListener('click', () => {  
+        const downloadMenu = imgBoucle.querySelector('.DownloadMenu');  
+        downloadMenu.style.display == 'block' ? downloadMenu.style.display = 'none' : downloadMenu.style.display = 'block';  
+    });  
+
+    const DownloadVid = imgBoucle.querySelector('.DownloadVid'); 
+
+    if (DownloadVid){
+    DownloadVid.addEventListener('click', () => {  
+        const link = document.createElement('a');    
+        link.href = img.VidSrc;  
+        link.download = img.VidSrc.split('/').pop();  
+        link.click(); 
+        const openDwn = imgBoucle.querySelector('.OpenDwn');
+        openDwn.click() 
+    }); 
+    } 
+     const downloadZip = imgBoucle.querySelector('.DownloadZip');  
+    if (downloadZip){
+    downloadZip.addEventListener('click', () => {  
+        const link = document.createElement('a');  
+        link.href =img.ZipVidSrc;  
+        link.download = img.ZipVidSrc.split('/').pop();  
+        link.click();  
+        const openDwn = imgBoucle.querySelector('.OpenDwn');
+        openDwn.click()
+    }); 
+    } 
+});  
+
+
+
+    const GoBack = document.querySelector('.GoBack');  
+    GoBack.addEventListener('click', () => {  
+    window.history.back()  
+}); 
+</script>
+</html>

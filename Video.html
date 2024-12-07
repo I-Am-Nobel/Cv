@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project</title>
+</head>
+<body>
+  <div class="MainDiv sticky-top  d-flex"
+  style=" width: 100%;
+background: radial-gradient(ellipse,rgb(31, 196, 133),#37d8bdd5,#3eb67ee8);        
+ ">
+     <img class="GoBack" 
+     style="margin-left: 40px;"
+     src="Assets\img\icons\arrow-left.svg" width="30" alt="">
+     
+ </div>
+
+  <div 
+  style="max-width: 96%; display: flex;"
+  class="container justify-content-center">
+  
+  <video
+  style='max-width:100%, max-heigth :90%'
+  controls='controls' poster='./Assets/img/projets/Nobel_s_Project_Connected_Farm.png' >
+    <source src='./Assets/Videos/FermeConnecté.mp4'>
+</video>
+
+  </div>
+  <script>
+            const GoBack = document.querySelector('.GoBack');  
+            GoBack.addEventListener('click', () => {  
+            window.history.back()  
+            }); 
+  </script>
+</body>
+</html>
