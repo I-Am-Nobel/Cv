@@ -10,15 +10,7 @@
     
 </head>
 <style>
-    .divHeader{
-margin-bottom: 15px;    
-border: 1px solid black;
-padding: 17px;
-background-color: rgba(96, 230, 6, 0.521);
-/* width: 100%; */
-position: relative; 
- z-index: 2000 ;
-}
+
 </style>
 <style>
     .dwn{
@@ -56,6 +48,10 @@ position: relative;
         background-color: #c6db09;
         margin-top: 10px;
     } }
+    @media (max-width:994px) {
+        .Videos{
+        justify-content: center;
+    } }
     @media (max-width:314px) {
         .vid-parent{
         max-width:240px ;
@@ -75,17 +71,19 @@ position: relative;
             <li 
             
             class="nav-item  rounded home"><a href="./index.html">
-                Home
+                <p>Home</p>
                 <i class="bi bi-house"></i>
             </a></li>
             <li class=" nav-item  rounded project"
             id="activePage"
-            ><a href="./Projects.html">Projects
-                <i class="bi bi-github"></i>
+            ><a href="./Projects.html">
+                <p>Projects</p>
+                <i class="bi bi-gitlab"></i>
             </a>
             
             </li>
-            <li class="nav-item  rounded contact" ><a href="./contact.html">Contacts
+            <li class="nav-item  rounded contact" ><a href="./contact.html">
+                <p>Contacts</p>
                 <i class="bi bi-telephone"></i>
             </a></li>
         </ul>
@@ -99,7 +97,7 @@ position: relative;
         padding: 20px;
             height: 800 px;
            "
-        class="rounded container bg-primary"
+        class="rounded container bg-success"
             > 
 
    <div class="mt-2 rounded container d-flex flex-wrap bg-primary justify-content-center"
@@ -109,7 +107,7 @@ position: relative;
        <h4 style="text-align: center;" >Jo_Nobel <i class="bi bi-file-play-fill"></i> </h4>
    </div>
     </div>
-    <div class="Videos rounded container d-flex flex-wrap justify-content-center">
+    <div class="Videos rounded container d-flex flex-wrap  ">
         <div></div>
 
     </div>
@@ -120,12 +118,14 @@ position: relative;
     {  
         ImgSrc: './Assets/img/projets/Nobel_s_Project_Connected_Farm.png',  
         Legend: 'Ce projet vise a creer une plateforme permettant a rendre une ferme completement connecté. <br> <span style="font-weight:bold">Technologies utilisés</span> : Node.js,express,React,MongoDb,Socket.io et d\'autres technologies.<br> <span style="font-weight:bold">Langages utilisés</span> : HTML,CSS,JAVASCRIPT,TYPESCRIPT et PYTHON',
+        ShowLegend:()=>{return Mypic[0].Legend.length>100? ` ${Mypic[0].Legend.substring(0,100)} ...Voir Plus`:Mypic[0].Legend},
         VidSrc: './Assets/Videos/FermeConnecté.mp4',  
         ZipVidSrc:'./Assets/FichiersZip/ProjetFermeConnecté_By_Nobel.rar',
-        ViewVid:'./Video.html'
+        ViewVid:'./Video.html',
+        urlVid:"./Videos.html/'./Assets/Videos/FermeConnecté.mp4'"
     }
 ];  
-
+console.log(Mypic[0].ShowLegend())
 Mypic.forEach((img, indx) => {  
     const imgBoucle = document.createElement("div");  
     imgBoucle.innerHTML = `  
@@ -138,10 +138,10 @@ Mypic.forEach((img, indx) => {
                 <i style="cursor: pointer;" class="OpenDwn bi bi-list fs-2 text-dark"></i>  
             </div>  
 
-            <div class="DownloadMenu container bg-primary  rounded dlwn"  
+            <div class="DownloadMenu container bg-success  rounded dlwn"  
                 style="display: none;padding:'5px'">  
-                <div class="DownloadVid dlwdPic d-flex"> <i class="bi bi-download"></i>  <i class="bi bi-file-play"></i> <p style="margin-left: 10px;"> video</p></div>  
-                <div class="DownloadZip dlwdPic d-flex"> <i class="bi bi-download"></i>  <i class="bi bi-file-zip"></i> <p style="margin-left: 10px;"> video compressé</p></div> 
+                <div  class="DownloadVid dlwdPic d-flex"> <i style='color:#fff;' class="bi bi-download"></i>  <i style='color:#fff;' class="bi bi-file-play"></i> <p style="color:#fff; margin-left: 10px;"> video</p></div>  
+                <div class="DownloadZip dlwdPic d-flex"> <i style='color:#fff;' class="bi bi-download"></i>  <i style='color:#fff;' class="bi bi-file-zip"></i> <p style="color:#fff;margin-left: 10px;"> video compressé</p></div> 
             </div> 
             <p
             style="text-align:center"
@@ -150,18 +150,25 @@ Mypic.forEach((img, indx) => {
             class=' justify-content-center d-flex'
             >  
             
-            <a href=${img.ViewVid}>
+            <a href=${img.ViewVid}?src='${img.VidSrc}'&&preview='${img.ImgSrc}''>
                 <img class="vid img-fluid " src="${img.ImgSrc}" alt="">  
             </a>  
             </div> 
             <div>  
                     <div class="container d-flex flex-wrap text-dark mt-2">  
                         
-                        <p class="msi-2" style="font-size: small;">${img.Legend}</p>  
+                        <p class="voirOpt msi-2" style="font-size: small;">
+                            ${(()=>{return img.Legend.length>100? ` ${img.Legend.substring(0,100)} <p style='font-size: small;color:blue' class='voirPlus'>Voir Plus</p>`:img.Legend})()}  
+
+                        </p>  
+                        <p class="voirtout msi-2"  style='display:none;font-size: small;' >
+                            ${img.Legend} <p class='voirMoins' style='display:none;font-size: small;color:blue;'>Voir moins</p>
+                        </p>  
                     </div>  
                 </div>   
         </div>  
     `;  
+    
 
     const imgParent = document.querySelector('.Videos');  
     imgParent.appendChild(imgBoucle);  
@@ -195,6 +202,33 @@ Mypic.forEach((img, indx) => {
         openDwn.click()
     }); 
     } 
+
+    const voirPlus=document.querySelector('.voirPlus')
+    const voirOpt=document.querySelector('.voirOpt')
+    console.log(voirOpt)
+    if(voirPlus){
+        voirPlus.addEventListener('click',()=>{
+            const voirtout=document.querySelector('.voirtout')
+            const voirOpt=document.querySelector('.voirOpt')
+            const voirMoins=document.querySelector('.voirMoins')
+            voirtout.style.display='block'
+            voirMoins.style.display='block'
+            voirOpt.style.display='none'
+            voirPlus.style.display='none'
+        })
+    }
+    const voirMoins=document.querySelector('.voirMoins')
+    if(voirMoins){
+        voirMoins.addEventListener('click',()=>{
+            const voirtout=document.querySelector('.voirtout')
+            const voirOpt=document.querySelector('.voirOpt')
+            const voirPlus=document.querySelector('.voirPlus')
+            voirPlus.style.display='block'
+            voirtout.style.display='none'
+            voirMoins.style.display='none'
+            voirOpt.style.display='block'
+        })
+    }
 });  
 
 </script>

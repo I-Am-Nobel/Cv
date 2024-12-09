@@ -37,9 +37,6 @@
              style=" width: 100%;
            background: radial-gradient(ellipse,rgb(31, 196, 133),#37d8bdd5,#3eb67ee8);        
             ">
-                <!-- <i 
-                style="font-size: xx-large;"
-                class="bi bi-arrow-left fs-6"></i> -->
                 <img class="GoBack" 
                 style="margin-left: 40px;"
                 src="Assets\img\icons\arrow-left.svg" width="30" alt="">
@@ -98,7 +95,8 @@ Mypic.forEach((img, indx) => {
         
         <div  class="img-parent rounded px-2"  
             style="background: linear-gradient(#fff,#05b105c4,#7e7e7e8e);">  
-            <div class="container d-flex flex-wrap rounded-top dwn">  
+            <div class="container d-flex  flex-wrap rounded-top dwn">
+                <p></p>  
                 <i style="cursor: pointer;" class="OpenDwn bi bi-list fs-2 text-dark"></i>  
             </div>  
 
@@ -109,8 +107,7 @@ Mypic.forEach((img, indx) => {
             <figure>  
                 <img class="img-fluid rounded" src="${img.ImgSrc}" alt="">  
                 <figcaption>  
-                    <div class="container d-flex flex-wrap text-dark mt-2">  
-                        <i class="bi bi-clock-history fs-6"></i> <br>
+                    <div class="container d-flex flex-wrap text-dark mt-2"> 
                         <p class="msi-2" style="font-size: small;">${img.Legend}</p>  
                     </div>  
                 </figcaption>  

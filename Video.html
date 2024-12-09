@@ -4,30 +4,80 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Project</title>
+  <link rel="stylesheet" href="./Assets/img/icons/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="./Assets/css/bootstrap.min.css">
 </head>
-<body>
-  <div class="MainDiv sticky-top  d-flex"
-  style=" width: 100%;
-background: radial-gradient(ellipse,rgb(31, 196, 133),#37d8bdd5,#3eb67ee8);        
- ">
-     <img class="GoBack" 
-     style="margin-left: 40px;"
-     src="Assets\img\icons\arrow-left.svg" width="30" alt="">
-     
- </div>
+<style>
+  .Vidcontainer{
+    vertical-align: middle;
+    margin-top: 15%;
+    padding: 5%;
+  }
+  .Video{
+   max-width:100%; 
+   max-height: 90%;
+   /* */
+  }
+  @media (max-width:520px) {
+   
 
+}
+</style>
+<body style="background-color: rgb(238, 238, 238);" >
+    <div class="MainDiv sticky-top  d-flex"
+    style=" width: 100%;
+  background: radial-gradient(ellipse,rgb(31, 196, 133),#37d8bdd5,#3eb67ee8);        
+  ">
+          <img class="GoBack" 
+          style="margin-left: 40px;"
+          src="Assets\img\icons\arrow-left.svg" width="30" alt="">        
+     </div>
+
+     <div>
+      <button  class="theme m-3  btn btn-outline-success">
+        Passez en mode sombre
+      </button>
+    </div>
   <div 
-  style="max-width: 96%; display: flex;"
-  class="container justify-content-center">
-  
-  <video
-  style='max-width:100%, max-heigth :90%'
-  controls='controls' poster='./Assets/img/projets/Nobel_s_Project_Connected_Farm.png' >
-    <source src='./Assets/Videos/FermeConnecté.mp4'>
-</video>
-
+  class="Vidcontainer  w-100 justify-content-center d-flex">
+  <div>
+    <p>
+      Chargement...
+    </p>
+  </div>
+  <!-- LA VIDEO S'AFFICHERA ICI -->
   </div>
   <script>
+      const url=window.location.href
+      
+      const Url = new URL(url)
+      const parametres = new URLSearchParams(Url.search)
+      console.log('or',parametres)
+      const src=parametres.get('src')
+      const preview=parametres.get('preview')
+      window.addEventListener('load',()=>{
+        console.log(src ,'preview',preview)
+      const Vidcontainer =document.querySelector('.Vidcontainer')
+      Vidcontainer.innerHTML=`
+            <video class='Video'  
+                controls='controls' poster=${preview} >
+                  <source src=${src}>
+            </video>
+      `
+    })
+    const theme=document.querySelector('.theme')
+    theme.addEventListener('click',()=>{
+      const body=document.querySelector('body')
+      console.log(body.style.backgroundColor)
+      if(body.style.backgroundColor=='rgb(238, 238, 238)'){
+        body.style.backgroundColor='#444'
+        theme.innerHTML='Passez en mode white'
+      }
+      else{
+        body.style.backgroundColor='#eee'
+        theme.innerHTML='Passez en mode sombre'
+      }
+    })
             const GoBack = document.querySelector('.GoBack');  
             GoBack.addEventListener('click', () => {  
             window.history.back()  

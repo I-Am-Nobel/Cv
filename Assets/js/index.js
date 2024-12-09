@@ -18,7 +18,4 @@ DownloadPic1.addEventListener('click',()=>{
     document.body.appendChild(link);
     link.click()
     document.removeChild(link)
-  
-    
-    console.log('Telechargement effectue')
 })

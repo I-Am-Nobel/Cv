@@ -11,16 +11,17 @@
 </head>
 <style>
   
-   /* nav uac */
-.divHeader{
-margin-bottom: 15px;    
-border: 1px solid black;
-padding: 17px;
-background-color: rgba(96, 230, 6, 0.521);
-/* width: 100%; */
-position: relative; 
- z-index: 2000 ;
+  .presentation{
+    font-family: cursive;
+    margin-right: 10px;
 }
+.presentation span{
+    color: rgb(3, 3, 66);
+    font-size:15px;
+    font-weight: bolder;
+    /* background-color: red; */
+}
+
 .galerie{
     border: 0.4px solid green;
     padding: 5px;
@@ -40,48 +41,69 @@ position: relative;
     >
     <div 
     
-    class=" container-fluid  sticky-top">
+    class=" container sticky-top">
         <header class=" d-flex flex-wrap  justify-content-center py-3 ">
           <ul class="nav nav-pill rounded divHeader">
             <li 
             id="activePage"
             class="nav-item activePage  rounded home"><a href="./index.html">
-                Home
-                <i class="bi bi-house"></i>
+                <p>Home</p>
+                <i  class="bi bi-house-fill"></i>
             </a></li>
-            <li class=" nav-item  rounded project" ><a href="./Projects.html">Projects
+            <li class=" nav-item  rounded project" ><a href="./Projects.html"> <p>Projects</p>
                 <i class="bi bi-github"></i>
             </a>
             
             </li>
-            <li class="nav-item  rounded contact" ><a href="./contact.html">Contacts
+            <li class="nav-item  rounded contact" ><a href="./contact.html"><p>Contacts</p>
                 <i class="bi bi-telephone"></i>
             </a></li>
         </ul>
         </div>
     
-    <div class=" cv">
+    <div class="cv">
+        <div class="Temps">
+            hi
+        </div>
             <div >
-            <h6 style="text-align: center;" >Presentation</h6>
+            <h1 class="rounded p-3" style="color:#eeeeee;text-align: center;
+            background: radial-gradient(circle,rgba(21, 61, 23, 0.822),rgba(69, 182, 69, 0.905),rgba(132, 134, 132, 0.912)) ;
+            font-family: cursive;
+            " >Bienvenue sur mon cv</h1>
            
             <ul>
-                
-                <li> <i class="bi bi-person" width="200" height="200"></i> Noms : <span>Josué Nobel Musonga</span> </li>
-                <li><i class="bi bi-" width="20" height="20">
-                    <?xml version="1.0" encoding="UTF-8"?>
-                    <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width="20" height="20"><path d="M24,9.724V19a5.006,5.006,0,0,1-5,5H18a1,1,0,0,1,0-2h1a3,3,0,0,0,3-3V9.724a3,3,0,0,0-1.322-2.487l-7-4.723a2.979,2.979,0,0,0-3.356,0l-7,4.723A3,3,0,0,0,2,9.724V19a3,3,0,0,0,3,3H6a1,1,0,0,1,0,2H5a5.006,5.006,0,0,1-5-5V9.724A4.993,4.993,0,0,1,2.2,5.579L9.2.855a4.981,4.981,0,0,1,5.594,0l7,4.724A5,5,0,0,1,24,9.724Zm-5,5.283a6.952,6.952,0,0,1-2.05,4.949l-3.515,3.438a2.063,2.063,0,0,1-2.87,0l-3.507-3.43A7,7,0,1,1,19,15.007Zm-2,0a5,5,0,1,0-8.536,3.535l3.5,3.422,3.58-3.43A4.958,4.958,0,0,0,17,15.007ZM15,15a3,3,0,1,1-3-3A3,3,0,0,1,15,15Z"/></svg>
+                <li class="d-flex"> 
+                     
+                   <p class="presentation">
+                        <i class="bi bi-person" width="200" height="200"></i>
+                        Je me nomme <span> Josué Nobel Musonga</span> 
+                   </p>
+                 </li>
+                <li>
+                    <p class="presentation">
+                        <i class="bi bi-house" width="200" height="200"></i>
+                        J'habite à  <span>Butembo, Republique Democratique du Congo</span></li>
+                    </p>
+                <li>
+                    <p class="presentation">
+                        <?xml version="1.0" encoding="UTF-8"?>
+                        <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width="20" height="20"><path d="m10.5,3C4.71,3,0,7.71,0,13.5s4.71,10.5,10.5,10.5,10.5-4.71,10.5-10.5S16.29,3,10.5,3Zm0,19c-4.687,0-8.5-3.813-8.5-8.5,0-1.328.306-2.586.852-3.707l.852.896c.189.198.451.311.725.311h2.181c.25,0,.489.099.666.276l.448.448c.177.177.276.416.276.666v.781c0,.53.211,1.039.586,1.414l1.138,1.138c.177.177.276.416.276.666v1.482c0,.623.505,1.128,1.128,1.128h.491c.413,0,.793-.226.99-.588l2.254-4.133c.239-.438.095-.985-.328-1.25l-3.05-1.726c-.318-.199-.685-.304-1.06-.304h-1.536c-.25,0-.489-.099-.666-.276l-.558-.558c-.368-.368-.368-.964,0-1.332l.354-.354c.287-.287.725-.358,1.087-.176l.786.393c.363.181.801.11,1.087-.176.306-.306.364-.78.142-1.151l-.82-1.366c-.185-.308-.179-.693.016-.995.001-.002.002-.004.004-.006.059-.001.119-.002.179-.002,4.687,0,8.5,3.813,8.5,8.5s-3.813,8.5-8.5,8.5ZM24,2.5c0,1.381-1.119,2.5-2.5,2.5s-2.5-1.119-2.5-2.5,1.119-2.5,2.5-2.5,2.5,1.119,2.5,2.5Z"/></svg>
+                        Je suis de nationalité  <span>Congolaise (RDC)</span>
+                    </p>
+                </li>
 
-                </i> Habite à : <span>Butembo, Republique democratique du congo</span></li>
                 <li>
-                    <?xml version="1.0" encoding="UTF-8"?>
-                    <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width="20" height="20"><path d="m10.5,3C4.71,3,0,7.71,0,13.5s4.71,10.5,10.5,10.5,10.5-4.71,10.5-10.5S16.29,3,10.5,3Zm0,19c-4.687,0-8.5-3.813-8.5-8.5,0-1.328.306-2.586.852-3.707l.852.896c.189.198.451.311.725.311h2.181c.25,0,.489.099.666.276l.448.448c.177.177.276.416.276.666v.781c0,.53.211,1.039.586,1.414l1.138,1.138c.177.177.276.416.276.666v1.482c0,.623.505,1.128,1.128,1.128h.491c.413,0,.793-.226.99-.588l2.254-4.133c.239-.438.095-.985-.328-1.25l-3.05-1.726c-.318-.199-.685-.304-1.06-.304h-1.536c-.25,0-.489-.099-.666-.276l-.558-.558c-.368-.368-.368-.964,0-1.332l.354-.354c.287-.287.725-.358,1.087-.176l.786.393c.363.181.801.11,1.087-.176.306-.306.364-.78.142-1.151l-.82-1.366c-.185-.308-.179-.693.016-.995.001-.002.002-.004.004-.006.059-.001.119-.002.179-.002,4.687,0,8.5,3.813,8.5,8.5s-3.813,8.5-8.5,8.5ZM24,2.5c0,1.381-1.119,2.5-2.5,2.5s-2.5-1.119-2.5-2.5,1.119-2.5,2.5-2.5,2.5,1.119,2.5,2.5Z"/></svg>
-                    Nationalité : <span>Congolaise</span></li>
-                <li><i class="bi bi-book-half"></i> Scolarité : <span>Etudie l'ingenierie informatique à l'<a href="https://www.uaconline.edu.cd/">Université de l'assomption au congo (UAC)</a></span>
+                    <p class="presentation">
+                        <i class="bi bi-book-half"></i>
+                         Scolarité ? <span>J'étudie l'ingenierie informatique à l'<a href="https://www.uaconline.edu.cd/">Université de l'assomption au congo (UAC)</a></span>
+                    </p>
                 <li>
+                    <p class="presentation">
                     <?xml version="1.0" encoding="UTF-8"?>
                     <svg xmlns="http://www.w3.org/2000/svg" id="arrow-circle-down" viewBox="0 0 24 24" width="15" height="15"><path d="M17.087,7H13V19a5.006,5.006,0,0,1-5,5H1a1,1,0,0,1,0-2H8a3,3,0,0,0,3-3V7H6.913a.924.924,0,0,1-.644-1.575L11.356.27a.9.9,0,0,1,1.288,0l5.087,5.155A.924.924,0,0,1,17.087,7Z"/></svg>
 
-                    Niveau: 3iem année du premier cycle (L3 en LMD), 2024-2025</li>  
+                    Niveau ? <span> Je fait la 4iem année du premier cycle (L3 LMD), 2024-2025 </span> 
+                    </p>
                 </li>
                 <li class="imgFig">      
                     <figure >                       
@@ -153,7 +175,7 @@ position: relative;
                     </li>
                     <div class="progress mb-3" role="progressbar"aria-label="Success  with label" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
                         <div class="progress-bar  w-75"
-                        style="background-color: rgb(8, 124, 14);"
+                        style="background-color: rgb(37, 212, 21);"
                         >75%</div>
                     </div>
                     <li>
@@ -177,7 +199,7 @@ position: relative;
                     </li>
                     <div class="progress mb-3" role="progressbar" aria-label="Success  with label" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
                         <div class="progress-bar  w-50"
-                        style="background-color: rgb(2, 43, 4);"
+                        style="background-color: rgb(8, 124, 14);"
                         >50%</div>
                     </div>
                     <li>
@@ -214,7 +236,35 @@ position: relative;
     </div>
 </div>
 </body>
-<script src="./Assets/js/index.js"></script>
+<script>
+
+    const Temps = document.querySelector('.Temps')
+    window.addEventListener('load',()=>{
+        const calculerTemps=()=>{
+        const date = new Date
+        const sec=()=>{return date.getSeconds().toString().length==1? `0${date.getSeconds()}`: date.getSeconds()}
+        const min=()=>{return date.getMinutes().toString().length==1? `0${date.getMinutes()}`: date.getMinutes()}
+        const heure=()=>{return date.getHours().toString().length==1? `0${date.getHours()}`: date.getHours()}
+        const jours = ()=>{return date.getDate().toString().length==1? `0${date.getDate()}`: date.getDate()}
+        const mois =  ()=>{return date.getMonth().toString().length==1? `0${date.getMonth()}`: date.getMonth()}
+        const annee = date.getFullYear()
+         Temps.innerHTML=`
+        <div class="time rounded d-block p-1  ">
+            <div class="d-flex ">
+                 <p  class='time'>Heure :  ${heure()}:${min()} </p>
+            </div>
+            <div class="d-flex">
+                 <p class='time'>Date : ${jours()}-${mois()}- ${annee} </p>
+            </div>
+        </div>
+        `}
+        calculerTemps()
+        setInterval(() => {
+            calculerTemps()
+        },20000);
+    })
+        
+</script>
+<!-- <script src="./Assets/js/index.js"></script> -->
 <script src="./Assets/js/bootstrap.min.js"></script>
 </html>
-https://github.com/I-Am-Nobel/GenieInfo.git
