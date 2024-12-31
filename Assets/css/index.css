@@ -4,24 +4,21 @@ body{
 .divHeader{
     margin-bottom: 15px;    
     border: 1px solid black;
-    padding: 17px;
+    padding: 7px;
     background-color: rgba(96, 230, 6, 0.521);
-    width: 500px;
-    height: 80px;
+    /* width: 500px;
+    height: 80px; */
     position: relative; 
      z-index: 2000 ;
-     justify-content: center;
+     display: flex;
+     width: 60%;
+     justify-content: space-between;
     }
-.divHeader  p{
-    display: inline-block;
-}
 .time{
     font-family: cursive;
 }
 #activePage{
-    padding: 4;
-    padding-bottom: 0;
-    height: 50px;
+    border: 0.1px solid #0a5a22;
    background: radial-gradient(circle,rgb(45, 223, 9),rgb(146, 233, 6),rgb(229, 255, 0)) ;
 }
 i{
@@ -29,8 +26,8 @@ i{
 }
 .home,.project,.contact{
     font-size: large;
-    margin-left: 30px;
-    padding: 10px;
+    /* margin-left: 30px; */
+    padding: 5px;
     text-align: center;  
 }
 .home :hover,.project :hover,.contact :hover{
@@ -39,9 +36,9 @@ i{
     color: rgb(0, 148, 32);
 }
 .home{
-    margin-left: 0px;
+    margin-left: 5px;
 }
-@media (max-width:520px) {
+@media (max-width:540px) {
     .home,.project,.contact{
     margin-left: 5px;
     padding-top: 5px;
@@ -49,9 +46,22 @@ i{
     text-align: center;
 
 }
-/* nav ul li a{
-    font-size: 13px;
-} */
+
+.divHeader {
+    width: 100%;
+}
+}
+@media (max-width:354px) {
+    .divHeader  span{
+        display: none;
+    }
+    #activePage{
+        width: 50px;
+        background: #ffffff;
+        border-radius: 50%;
+        /* border: 0.1px solid #0a5a22;
+       background: radial-gradient(circle,rgb(45, 223, 9),rgb(146, 233, 6),rgb(229, 255, 0)) ; */
+    }
 }
 @media (max-width:423px) {
     .home,.project,.contact{
@@ -62,19 +72,17 @@ i{
 
 }
 #activePage{
-    background: transparent ;
+    /* background: transparent ; */
  }
  #activePage i{
    color: #0a5a22;
  }
- .divHeader  p{
-    display: none;
-}
+
 .divHeader{   
-    border: 0.01px solid rgba(0, 0, 0, 0.5);
-    padding: 0.3px;
+    /* border: 0.01px solid rgba(0, 0, 0, 0.5); */
+    /* padding: 1.3px; */
     background-color: rgba(108, 238, 2, 0.521);
-    height: 40px;
+    /* height: 40px; */
     }
 }
 /*  */

@@ -7,23 +7,29 @@
     <link rel="stylesheet" href="./Assets/css/index.css">
     <link rel="stylesheet" href="./Assets/img/icons/font/bootstrap-icons.css">
     <link rel="stylesheet" href="./Assets/css/bootstrap.min.css">
-    
+    <script src="./Assets/js/preference.js"></script>
 </head>
 <style>
 
 </style>
 <style>
+    .voirMoins,.voirPlus{
+        cursor: pointer;
+    }
+    .Videos{
+        background-color: rgb(0, 93, 199);
+    }
     .dwn{
         justify-content: space-between;
     }
     .vid-parent{
        max-width: 400px;
        max-height: 520px;
-        border: 0.2px solid #bebdbd;
+        border: 0.2px solid #1b2421;
         margin: 10px;
         /* display: flex; */
         justify-content: center;
-        /* background-color: 'red'; */
+     
     }
     .vid{
         width: 100%;
@@ -35,15 +41,19 @@
     }
     @media (max-width:527px) {
         .vid-parent{
-        max-width:100% ;
-        height: auto;
-        background-color: #c6db09;
-        margin-top: 10px;
+       
+            
+        width: 100%;
+        margin: 0px;
+        /* display: flex; */
+    }
+    .Videos{
+        background-color: transparent;
     }
 }
     @media (max-width:430px) {
         .vid-parent{
-        max-width:290px ;
+        /* max-width:290px ; */
         height: auto;
         background-color: #c6db09;
         margin-top: 10px;
@@ -71,165 +81,53 @@
             <li 
             
             class="nav-item  rounded home"><a href="./index.html">
-                <p>Home</p>
+                <span>Home</span>
                 <i class="bi bi-house"></i>
             </a></li>
             <li class=" nav-item  rounded project"
             id="activePage"
             ><a href="./Projects.html">
-                <p>Projects</p>
-                <i class="bi bi-gitlab"></i>
+                <span>Projects</span>
+                <i class="bi bi-github"></i>
             </a>
             
             </li>
             <li class="nav-item  rounded contact" ><a href="./contact.html">
-                <p>Contacts</p>
+                <span>Contacts</span>
                 <i class="bi bi-telephone"></i>
             </a></li>
         </ul>
         </div>
-        <div
-        class="container"
-        >
+        <!-- <div
+        class="containeri"
+        > -->
             <h3 style="text-align:center">Projets</h3>
-            <div
+            <!-- <div
             style="
-        padding: 20px;
+        
             height: 800 px;
            "
-        class="rounded container bg-success"
-            > 
+        class="rounded containeri bg-success"
+            >  -->
 
-   <div class="mt-2 rounded container d-flex flex-wrap bg-primary justify-content-center"
-   style="  background: radial-gradient(ellipse,#0408ff8e,#fc27015d,#e6ff0281);"
+   <div class="mt-2 mb-4 rounded  w-100 d-flex flex-wrap bg-primary justify-content-center"
+   style="  background: radial-gradient(ellipse,#0408ff8e,#fc27015d,#e6ff0281); border: 1px solid #1b2421;"
    >
-   <div class="" style="width: 100%; padding-top: 10px; padding-bottom: 10px;">
-       <h4 style="text-align: center;" >Jo_Nobel <i class="bi bi-file-play-fill"></i> </h4>
+   <div class="" style="width: 100%; color:#ffffff; padding-top: 10px; padding-bottom: 10px;">
+       <h4 style="text-align: center;" >Jo_Nobel <i class="bi bi-file-play-fill"
+        style="color: #ffffff;"
+        ></i> </h4>
    </div>
     </div>
-    <div class="Videos rounded container d-flex flex-wrap  ">
+    <div class="Videos rounded  container   d-flex flex-wrap  "
+    style="width: 100%; padding-top: 10px; padding-bottom: 10px; justify-content: center;"
+    >
         <div></div>
 
     </div>
 </body>
 
-<script>
-    const Mypic = [  
-    {  
-        ImgSrc: './Assets/img/projets/Nobel_s_Project_Connected_Farm.png',  
-        Legend: 'Ce projet vise a creer une plateforme permettant a rendre une ferme completement connecté. <br> <span style="font-weight:bold">Technologies utilisés</span> : Node.js,express,React,MongoDb,Socket.io et d\'autres technologies.<br> <span style="font-weight:bold">Langages utilisés</span> : HTML,CSS,JAVASCRIPT,TYPESCRIPT et PYTHON',
-        ShowLegend:()=>{return Mypic[0].Legend.length>100? ` ${Mypic[0].Legend.substring(0,100)} ...Voir Plus`:Mypic[0].Legend},
-        VidSrc: './Assets/Videos/FermeConnecté.mp4',  
-        ZipVidSrc:'./Assets/FichiersZip/ProjetFermeConnecté_By_Nobel.rar',
-        ViewVid:'./Video.html',
-        urlVid:"./Videos.html/'./Assets/Videos/FermeConnecté.mp4'"
-    }
-];  
-console.log(Mypic[0].ShowLegend())
-Mypic.forEach((img, indx) => {  
-    const imgBoucle = document.createElement("div");  
-    imgBoucle.innerHTML = `  
-        
-        <div  class="vid-parent  rounded px-2 "  
-            style="background: linear-gradient(#fff,#05b105c4,#7e7e7e8e);">  
-            <div class="container d-flex flex-wrap justify-content-space-between rounded-top dwn">  
-                <p>
-                </p>
-                <i style="cursor: pointer;" class="OpenDwn bi bi-list fs-2 text-dark"></i>  
-            </div>  
-
-            <div class="DownloadMenu container bg-success  rounded dlwn"  
-                style="display: none;padding:'5px'">  
-                <div  class="DownloadVid dlwdPic d-flex"> <i style='color:#fff;' class="bi bi-download"></i>  <i style='color:#fff;' class="bi bi-file-play"></i> <p style="color:#fff; margin-left: 10px;"> video</p></div>  
-                <div class="DownloadZip dlwdPic d-flex"> <i style='color:#fff;' class="bi bi-download"></i>  <i style='color:#fff;' class="bi bi-file-zip"></i> <p style="color:#fff;margin-left: 10px;"> video compressé</p></div> 
-            </div> 
-            <p
-            style="text-align:center"
-            >Cliquez la photo pour lire la video</p> 
-            <div
-            class=' justify-content-center d-flex'
-            >  
-            
-            <a href=${img.ViewVid}?src='${img.VidSrc}'&&preview='${img.ImgSrc}''>
-                <img class="vid img-fluid " src="${img.ImgSrc}" alt="">  
-            </a>  
-            </div> 
-            <div>  
-                    <div class="container d-flex flex-wrap text-dark mt-2">  
-                        
-                        <p class="voirOpt msi-2" style="font-size: small;">
-                            ${(()=>{return img.Legend.length>100? ` ${img.Legend.substring(0,100)} <p style='font-size: small;color:blue' class='voirPlus'>Voir Plus</p>`:img.Legend})()}  
-
-                        </p>  
-                        <p class="voirtout msi-2"  style='display:none;font-size: small;' >
-                            ${img.Legend} <p class='voirMoins' style='display:none;font-size: small;color:blue;'>Voir moins</p>
-                        </p>  
-                    </div>  
-                </div>   
-        </div>  
-    `;  
-    
-
-    const imgParent = document.querySelector('.Videos');  
-    imgParent.appendChild(imgBoucle);  
-
-    const openDwn = imgBoucle.querySelector('.OpenDwn');  
-    openDwn.addEventListener('click', () => {  
-        const downloadMenu = imgBoucle.querySelector('.DownloadMenu');  
-        downloadMenu.style.display == 'block' ? downloadMenu.style.display = 'none' : downloadMenu.style.display = 'block';  
-    });  
-
-    const DownloadVid = imgBoucle.querySelector('.DownloadVid'); 
-
-    if (DownloadVid){
-    DownloadVid.addEventListener('click', () => {  
-        const link = document.createElement('a');    
-        link.href = img.VidSrc;  
-        link.download = img.VidSrc.split('/').pop();  
-        link.click(); 
-        const openDwn = imgBoucle.querySelector('.OpenDwn');
-        openDwn.click() 
-    }); 
-    } 
-     const downloadZip = imgBoucle.querySelector('.DownloadZip');  
-    if (downloadZip){
-    downloadZip.addEventListener('click', () => {  
-        const link = document.createElement('a');  
-        link.href =img.ZipVidSrc;  
-        link.download = img.ZipVidSrc.split('/').pop();  
-        link.click();  
-        const openDwn = imgBoucle.querySelector('.OpenDwn');
-        openDwn.click()
-    }); 
-    } 
-
-    const voirPlus=document.querySelector('.voirPlus')
-    const voirOpt=document.querySelector('.voirOpt')
-    console.log(voirOpt)
-    if(voirPlus){
-        voirPlus.addEventListener('click',()=>{
-            const voirtout=document.querySelector('.voirtout')
-            const voirOpt=document.querySelector('.voirOpt')
-            const voirMoins=document.querySelector('.voirMoins')
-            voirtout.style.display='block'
-            voirMoins.style.display='block'
-            voirOpt.style.display='none'
-            voirPlus.style.display='none'
-        })
-    }
-    const voirMoins=document.querySelector('.voirMoins')
-    if(voirMoins){
-        voirMoins.addEventListener('click',()=>{
-            const voirtout=document.querySelector('.voirtout')
-            const voirOpt=document.querySelector('.voirOpt')
-            const voirPlus=document.querySelector('.voirPlus')
-            voirPlus.style.display='block'
-            voirtout.style.display='none'
-            voirMoins.style.display='none'
-            voirOpt.style.display='block'
-        })
-    }
-});  
+<script src="./Assets/js/Project.js">
 
 </script>
 </html>
