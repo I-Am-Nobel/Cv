@@ -1,13 +1,16 @@
 body{
     padding: 10px;
 }
+.barresDeProg{
+    width: 45%;
+    margin-left: 5px;
+  }
 .divHeader{
     margin-bottom: 15px;    
     border: 1px solid black;
     padding: 7px;
     background-color: rgba(96, 230, 6, 0.521);
-    /* width: 500px;
-    height: 80px; */
+   margin-top: 10px;
     position: relative; 
      z-index: 2000 ;
      display: flex;
@@ -46,7 +49,10 @@ i{
     text-align: center;
 
 }
-
+.barresDeProg{
+    width: 95%;
+    margin-left: 5px;
+  }
 .divHeader {
     width: 100%;
 }
@@ -103,7 +109,9 @@ i{
 .divHeader{
     padding: 17px;
     }
+
+.barresDeProg{
+    width: 45%;
+    margin-left: 5px;
 }
-.Tech li {
-    margin-left: 40px;
 }

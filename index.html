@@ -10,7 +10,7 @@
     <script src="./Assets/js/preference.js"></script>
 </head>
 <style>
-  
+ 
   .presentation{
     font-family: cursive;
     /* margin-right: 10px; */
@@ -80,7 +80,7 @@
                 <div class="d-flex"> 
                      
                    <p class="presentation">
-                        <i class="bi bi-person" width="200" height="200"></i>
+                        <i class="bi bi-person-workspace" width="200" height="200"></i>
                         Je me nomme <span> Josué Nobel Musonga</span> 
                    </p>
                  </div>
@@ -91,9 +91,8 @@
                     </p>
                 <div>
                     <p class="presentation">
-                        <?xml version="1.0" encoding="UTF-8"?>
-                        <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width="20" height="20"><path d="m10.5,3C4.71,3,0,7.71,0,13.5s4.71,10.5,10.5,10.5,10.5-4.71,10.5-10.5S16.29,3,10.5,3Zm0,19c-4.687,0-8.5-3.813-8.5-8.5,0-1.328.306-2.586.852-3.707l.852.896c.189.198.451.311.725.311h2.181c.25,0,.489.099.666.276l.448.448c.177.177.276.416.276.666v.781c0,.53.211,1.039.586,1.414l1.138,1.138c.177.177.276.416.276.666v1.482c0,.623.505,1.128,1.128,1.128h.491c.413,0,.793-.226.99-.588l2.254-4.133c.239-.438.095-.985-.328-1.25l-3.05-1.726c-.318-.199-.685-.304-1.06-.304h-1.536c-.25,0-.489-.099-.666-.276l-.558-.558c-.368-.368-.368-.964,0-1.332l.354-.354c.287-.287.725-.358,1.087-.176l.786.393c.363.181.801.11,1.087-.176.306-.306.364-.78.142-1.151l-.82-1.366c-.185-.308-.179-.693.016-.995.001-.002.002-.004.004-.006.059-.001.119-.002.179-.002,4.687,0,8.5,3.813,8.5,8.5s-3.813,8.5-8.5,8.5ZM24,2.5c0,1.381-1.119,2.5-2.5,2.5s-2.5-1.119-2.5-2.5,1.119-2.5,2.5-2.5,2.5,1.119,2.5,2.5Z"/></svg>
-                        Je suis de nationalité  <span>Congolaise (RDC)</span>
+                        <i class="bi bi-globe-europe-africa"></i>
+                        Je suis de nationalité  <span>Congolaise (RDC )</span>
                     </p>
                 </div>
 
@@ -125,101 +124,157 @@
               </div>
             </div>
             </div>
-            <div>
-                <h6 style="text-align: center;">
-                    Languages de programmation et Technologies
-                </h6>
-                <div class="container">
-                    <p style="color: rgb(68, 66, 66);">
-                        Les barres de progression expriment le niveau d'apprentissage des bases dans ces technologies.
-                        et non la comprehension de la technologie entiere!
-                    </p>
-                </div>
-                <div  class="   py-3 ">
-                <ul class=" Tech">
-                    <li>
-                        <i class="bi bi-"></i> HTML5
-                    </li>
-                    <div class="progress mb-3" role="progressbar" aria-label="success  with label" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
-                        <div class="progress-bar  w-75"
-                        style="background-color: rgb(37, 212, 21);"
-                        >75%</div>
-                      </div>
-                    <li>
-                        <i class="bi bi-"></i>  CSS3
-                    </li>
-                    <div class="progress mb-3" role="progressbar" aria-label="success  with label" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
-                        <div class="progress-bar  w-75"
-                        style="background-color: rgb(37, 212, 21);"
-                        >75%</div>
-                      </div>
-                    <li>
-                        <i class="bi bi-"></i> Bootstrapp
-                    </li>
-                        <div class="progress mb-3" role="progressbar" aria-label="Success  with label" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
-                            <div class="progress-bar w-50"
-                            style="background-color: rgb(8, 124, 14);"
-                            >50%</div>
+            <div  class="rounded container p-3 my-3"
+            style="border: 1px solid #0f2a2b; ">
+                <h4 style="text-align: center;">Competences</h4>
+            
+                        <div class="">
+                            <div class="container">
+                                <i style="color: rgb(0, 0, 0);"
+                                class="bi bi-info-circle info"
+                                onclick="(()=>{
+                                 
+                                   const infotext=document.querySelector('.infotext')
+                                   const info=document.querySelector('.info')
+                                   infotext && infotext.style.display =='block'?
+                                   infotext.style.display = 'none':
+       
+                                   infotext.style.display ='block';
+                                   info.style.display ='none';
+                                })()"
+                                ></i>
+                            </div>
+                        
+                            <div style="color: rgb(248, 244, 244);  display: none;"
+                             class="infotext  container rounded p-2 bg-dark">
+                                <div
+                                class="d-flex"
+                                style="justify-content: space-between;"
+                                >
+                                 <span></span>
+                                    <i class="bi bi-x-circle"
+                                    style="color: rgb(248, 244, 244); "
+                                    onclick="(()=>{
+                                  
+                                        const infotext=document.querySelector('.infotext')
+                                        const info=document.querySelector('.info')
+                                        //   console.log('hi negro,',infotext)
+                                          infotext && (()=>{
+                                          infotext.style.display =='block' &&
+                                         (()=> {
+                                            infotext.style.display = 'none';
+                                            info.style.display ='block';
+                                        })()
+                                        }
+                                        )()
+                                       })()"
+                                    ></i>
+                                </div>
+                                <p>
+                                    Les barres de progression expriment le niveau d'apprentissage des bases dans ces technologies.
+                                    et non la comprehension des technologies entieres, ce qui serait une speculation 😅.
+                                </p>
+                            </div>
+                            <div  class="   py-3 ">
+                                <h5 style="text-align: center;">
+                                
+                                    Languages de programmation et Technologies
+                                </h5>
+                            <div class="d-flex flex-wrap "
+                                 style="justify-content: space-between;"
+                            >
+                                <div class="barresDeProg">
+                                        <i class="bi bi-"></i> HTML5
+                                    
+                                    <div class="progress mb-3" role="progressbar" aria-label="success  with label" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                                        <div class="progress-bar  w-75"
+                                        style="background-color: rgb(37, 212, 21);"
+                                        >75%</div>
+                                    </div>
+                                 </div>
+                                <div  class="barresDeProg">
+                                            <i class="bi bi-"></i>  CSS3
+                                        
+                                        <div class="progress mb-3" role="progressbar" aria-label="success  with label" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                                            <div class="progress-bar  w-75"
+                                            style="background-color: rgb(37, 212, 21);"
+                                            >75%</div>
+                                        </div>
+                                </div>
+                                <div  class="barresDeProg">
+                                    <i class="bi bi-"></i> Bootstrapp
+                                
+                                    <div class="progress mb-3" role="progressbar" aria-label="Success  with label" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+                                        <div class="progress-bar w-50"
+                                        style="background-color: rgb(8, 124, 14);"
+                                        >50%</div>
+                                    </div>
+                                </div>
+                                <div  class="barresDeProg">
+                                            <i class="bi bi-"></i> JavaScript
+                                    
+                                        <div class="progress mb-3" role="progressbar" aria-label="Success  with label" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                                            <div class="progress-bar w-75"
+                                            style="background-color: rgb(37, 212, 21);"
+                                            >75%</div>
+                                        </div>
+                                </div>
+                                <div  class="barresDeProg">
+                                            <i class="bi bi-"></i> React
+                                        <div class="progress mb-3" role="progressbar" aria-label="Success  with label" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                                            <div class="progress-bar w-75"
+                                            style="background-color: rgb(37, 212, 21);"
+                                            >75%</div>
+                                        </div>
+                                </div>
+                                <div  class="barresDeProg">
+                                        <i class="bi bi-"></i> React-Native                                        
+                                        <div class="progress mb-3" role="progressbar"aria-label="Success  with label" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                                            <div class="progress-bar  w-75"
+                                            style="background-color: rgb(37, 212, 21);"
+                                            >75%</div>
+                                        </div>
+                                </div>
+                                <div  class="barresDeProg">
+                                        <i class="bi bi-"></i> Node Js
+                                        <div class="progress mb-3" role="progressbar" aria-label="Success  with label" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                                            <div class="progress-bar  w-75"
+                                            style="background-color: rgb(37, 212, 21);"
+                                            >75%</div>
+                                        </div>
+                                </div>
+                                <div  class="barresDeProg">
+                                        <i class="bi bi-"></i> Arduino (Cpp)
+                                        <div class="progress mb-3" role="progressbar" aria-label="Success  with label" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                                            <div class="progress-bar  w-75"
+                                            style="background-color: rgb(37, 212, 21);"
+                                            >75%
+                                            </div>
+                                        </div>
+                                </div>
+                                <div  class="barresDeProg">
+                                        <i class="bi bi-"></i> Python
+                                        <div class="progress mb-3" role="progressbar" aria-label="Success  with label" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+                                            <div class="progress-bar  w-50"
+                                            style="background-color: rgb(8, 124, 14);"
+                                            >50%</div>
+                                        </div>
+                                </div>
+
+                                <div  class="barresDeProg">
+                                    <i class="bi bi-"></i> TensorFlow
+                                    <div class="progress  mb-3" role="progressbar" aria-label="Success  with label" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                                        <div class="progress-bar  w-25"
+                                        style="background-color: rgb(2, 43, 4);"
+                                        >25%</div>
+                                    </div>
+                            </div>
                         </div>
-                    <li>
-                        <i class="bi bi-"></i> JavaScript
-                    </li>
-                    <div class="progress mb-3" role="progressbar" aria-label="Success  with label" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
-                        <div class="progress-bar w-75"
-                        style="background-color: rgb(37, 212, 21);"
-                        >75%</div>
-                    </div>
-                    <li>
-                        <i class="bi bi-"></i> React
-                    </li>
-                    <div class="progress mb-3" role="progressbar" aria-label="Success  with label" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
-                        <div class="progress-bar w-75"
-                        style="background-color: rgb(37, 212, 21);"
-                        >75%</div>
-                    </div>
-                    <li>
-                        <i class="bi bi-"></i> React-Native
-                    </li>
-                    <div class="progress mb-3" role="progressbar"aria-label="Success  with label" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
-                        <div class="progress-bar  w-75"
-                        style="background-color: rgb(37, 212, 21);"
-                        >75%</div>
-                    </div>
-                    <li>
-                        <i class="bi bi-"></i> Node Js
-                    </li>
-                    <div class="progress mb-3" role="progressbar" aria-label="Success  with label" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
-                        <div class="progress-bar  w-75"
-                        style="background-color: rgb(37, 212, 21);"
-                        >75%</div>
-                    </div>
-                    <li>
-                        <i class="bi bi-"></i> Arduino (Cpp)
-                    </li>
-                    <div class="progress mb-3" role="progressbar" aria-label="Success  with label" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
-                        <div class="progress-bar  w-75"
-                        style="background-color: rgb(37, 212, 21);"
-                        >75%</div>
-                    </div>
-                    <li>
-                        <i class="bi bi-"></i> Python
-                    </li>
-                    <div class="progress mb-3" role="progressbar" aria-label="Success  with label" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
-                        <div class="progress-bar  w-50"
-                        style="background-color: rgb(8, 124, 14);"
-                        >50%</div>
-                    </div>
-                    <li>
-                        <i class="bi bi-"></i> TensorFlow
-                    </li>
-                    <div class="progress mb-3" role="progressbar" aria-label="Success  with label" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                        <div class="progress-bar  w-25"
-                        style="background-color: rgb(2, 43, 4);"
-                        >25%</div>
-                    </div>
-                </ul>
-            </div>
+                        </div>
         </div>
+        </div>
+        <div  class="rounded container p-3 my-3"
+            style="border: 1px solid #0f2a2b; ">
             <h4
             style="text-align: center;"
             >Autres passions</h4>
@@ -236,9 +291,11 @@
                         </g>
                         </svg>
                 
-                </i> Football (joue en amateur) </li> 
+                </i> Football (joue en amateur)
                 </li>
             </ul>
+        </div>
+
             </div>
     </div>
 </div>
@@ -253,12 +310,12 @@
         const min=()=>{return date.getMinutes().toString().length==1? `0${date.getMinutes()}`: date.getMinutes()}
         const heure=()=>{return date.getHours().toString().length==1? `0${date.getHours()}`: date.getHours()}
         const jours = ()=>{return date.getDate().toString().length==1? `0${date.getDate()}`: date.getDate()}
-        const mois =  ()=>{return (date.getMonth()+1).toString().length==1? `0${date.getMonth()}`: date.getMonth()+1}
+        const mois =  ()=>{return (date.getMonth()+1).toString().length==1? `0${date.getMonth()+1}`: date.getMonth()+1}
         const annee = date.getFullYear()
          Temps.innerHTML=`
         <div class="time rounded d-block p-1  ">
             <div class="d-flex ">
-                 <p  class='time'>Heure :  ${heure()}:${min()} </p>
+                 <p  class='time'>Heure :  ${heure()}:${min()} (UTC +1 )</p>
             </div>
             <div class="d-flex">
                  <p class='time'>Date : ${jours()}-${mois()}- ${annee} </p>

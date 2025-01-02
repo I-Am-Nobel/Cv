@@ -1,6 +1,5 @@
 const VoirMoins=(index,commiter)=>{
     const Fermer=()=>{
-        console.log('Wesh wesh ! : '+`${'voirMoins'+index}`)
         const voirMoins=document.getElementById(`${'voirMoins'+index}`)
         const voirtout=document.getElementById(`${'voirtout'+index}`)
         const voirOpt=document.getElementById(`${'voirOpt'+index}`)
@@ -32,53 +31,9 @@ ShowLegend:()=>{return Mypic[0].Legend.length>100? ` ${Mypic[0].Legend.substring
 VidSrc: './Assets/Videos/FermeConnecté.mp4',  
 ZipVidSrc:'./Assets/FichiersZip/ProjetFermeConnecté_By_Nobel.rar',
 ViewVid:'./Video.html',
-urlVid:"./Videos.html/'./Assets/Videos/FermeConnecté.mp4'"
+urlVid:"./Videos.html/'./Assets/Videos/FermeConnecté.mp4'",
+PdfSrc:'./Assets/Pdfs/Introduction TFC Nobel.pdf'
 },
-// {  
-// ImgSrc: './Assets/img/projets/Nobel_s_Project_Connected_Farm.png',  
-// Legend: 'Ce projet vise a creer une plateforme permettant a rendre une ferme completement connecté. <br> <span style="font-weight:bold">Technologies utilisés</span> : Node.js,express,React,MongoDb,Socket.io et d\'autres technologies.<br> <span style="font-weight:bold">Langages utilisés</span> : HTML,CSS,JAVASCRIPT,TYPESCRIPT et PYTHON',
-// ShowLegend:()=>{return Mypic[0].Legend.length>100? ` ${Mypic[0].Legend.substring(0,100)} ...Voir Plus`:Mypic[0].Legend},
-// VidSrc: './Assets/Videos/FermeConnecté.mp4',  
-// ZipVidSrc:'./Assets/FichiersZip/ProjetFermeConnecté_By_Nobel.rar',
-// ViewVid:'./Video.html',
-// urlVid:"./Videos.html/'./Assets/Videos/FermeConnecté.mp4'"
-// },
-// {  
-// ImgSrc: './Assets/img/projets/Nobel_s_Project_Connected_Farm.png',  
-// Legend: 'Ce projet vise a creer une plateforme permettant a rendre une ferme completement connecté. <br> <span style="font-weight:bold">Technologies utilisés</span> : Node.js,express,React,MongoDb,Socket.io et d\'autres technologies.<br> <span style="font-weight:bold">Langages utilisés</span> : HTML,CSS,JAVASCRIPT,TYPESCRIPT et PYTHON',
-// ShowLegend:()=>{return Mypic[0].Legend.length>100? ` ${Mypic[0].Legend.substring(0,100)} ...Voir Plus`:Mypic[0].Legend},
-// VidSrc: './Assets/Videos/FermeConnecté.mp4',  
-// ZipVidSrc:'./Assets/FichiersZip/ProjetFermeConnecté_By_Nobel.rar',
-// ViewVid:'./Video.html',
-// urlVid:"./Videos.html/'./Assets/Videos/FermeConnecté.mp4'"
-// },
-// {  
-// ImgSrc: './Assets/img/projets/Nobel_s_Project_Connected_Farm.png',  
-// Legend: 'Ce projet vise a creer une plateforme permettant a rendre une ferme completement connecté. <br> <span style="font-weight:bold">Technologies utilisés</span> : Node.js,express,React,MongoDb,Socket.io et d\'autres technologies.<br> <span style="font-weight:bold">Langages utilisés</span> : HTML,CSS,JAVASCRIPT,TYPESCRIPT et PYTHON',
-// ShowLegend:()=>{return Mypic[0].Legend.length>100? ` ${Mypic[0].Legend.substring(0,100)} ...Voir Plus`:Mypic[0].Legend},
-// VidSrc: './Assets/Videos/FermeConnecté.mp4',  
-// ZipVidSrc:'./Assets/FichiersZip/ProjetFermeConnecté_By_Nobel.rar',
-// ViewVid:'./Video.html',
-// urlVid:"./Videos.html/'./Assets/Videos/FermeConnecté.mp4'"
-// },
-// {  
-// ImgSrc: './Assets/img/projets/Nobel_s_Project_Connected_Farm.png',  
-// Legend: 'Ce projet vise a creer une plateforme permettant a rendre une ferme completement connecté. <br> <span style="font-weight:bold">Technologies utilisés</span> : Node.js,express,React,MongoDb,Socket.io et d\'autres technologies.<br> <span style="font-weight:bold">Langages utilisés</span> : HTML,CSS,JAVASCRIPT,TYPESCRIPT et PYTHON',
-// ShowLegend:()=>{return Mypic[0].Legend.length>100? ` ${Mypic[0].Legend.substring(0,100)} ...Voir Plus`:Mypic[0].Legend},
-// VidSrc: './Assets/Videos/FermeConnecté.mp4',  
-// ZipVidSrc:'./Assets/FichiersZip/ProjetFermeConnecté_By_Nobel.rar',
-// ViewVid:'./Video.html',
-// urlVid:"./Videos.html/'./Assets/Videos/FermeConnecté.mp4'"
-// },
-// {  
-// ImgSrc: './Assets/img/projets/Nobel_s_Project_Connected_Farm.png',  
-// Legend: 'Ce projet vise a creer une plateforme permettant a rendre une ferme completement connecté. <br> <span style="font-weight:bold">Technologies utilisés</span> : Node.js,express,React,MongoDb,Socket.io et d\'autres technologies.<br> <span style="font-weight:bold">Langages utilisés</span> : HTML,CSS,JAVASCRIPT,TYPESCRIPT et PYTHON',
-// ShowLegend:()=>{return Mypic[0].Legend.length>100? ` ${Mypic[0].Legend.substring(0,100)} ...Voir Plus`:Mypic[0].Legend},
-// VidSrc: './Assets/Videos/FermeConnecté.mp4',  
-// ZipVidSrc:'./Assets/FichiersZip/ProjetFermeConnecté_By_Nobel.rar',
-// ViewVid:'./Video.html',
-// urlVid:"./Videos.html/'./Assets/Videos/FermeConnecté.mp4'"
-// },
 ];  
 console.log(Mypic[0].ShowLegend())
 Mypic.forEach((img, index) => {  
@@ -94,21 +49,24 @@ style="width: 100%;background: linear-gradient(#fff,#05b105c4,#7e7e7e8e);">
     <i style="cursor: pointer;" class="OpenDwn bi bi-list fs-2 text-dark"></i>  
 </div>  
 
-<div class="DownloadMenu container bg-success  rounded dlwn"  
+<div class="DownloadMenu container bg-dark mb-2 dlwn"  
     style="display: none;padding:'5px'">  
     <div  class="DownloadVid dlwdPic d-flex"> <i style='color:#fff;' class="bi bi-download"></i>  <i style='color:#fff;' class="bi bi-file-play"></i> <p style="color:#fff; margin-left: 10px;"> video</p></div>  
     <div class="DownloadZip dlwdPic d-flex"> <i style='color:#fff;' class="bi bi-download"></i>  <i style='color:#fff;' class="bi bi-file-zip"></i> <p style="color:#fff;margin-left: 10px;"> video compressé</p></div> 
+    <div class="DownloadPdf dlwdPic d-flex"> <i style='color:#fff;' class="bi bi-download"></i>  <i style='color:#fff;' class="bi bi-file-pdf "></i> <p style="color:#fff;margin-left: 10px;"> projet en pdf</p></div> 
 </div> 
-<p
-style="text-align:center"
->Cliquez la photo pour lire la video</p> 
+<p>
+L'Iot, l'IA et la
+traçabilité pour une détection précoce des maladies bovines.
+</p>
 <div
 class=' justify-content-center d-flex'
 >  
 
-<a href=${img.ViewVid}?src='${img.VidSrc}'&&preview='${img.ImgSrc}''>
-    <img class="vid img-fluid " src="${img.ImgSrc}" alt="">  
-</a>  
+        <video class='Video container'  
+                controls='controls' poster=${img.ImgSrc} >
+                  <source src=${img.VidSrc}>
+        </video>  
 </div> 
 <div>  
         <div class="container d-flex flex-wrap text-dark mt-2">  
@@ -152,7 +110,8 @@ const openDwn = imgBoucle.querySelector('.OpenDwn');
 openDwn.click() 
 }); 
 } 
-const downloadZip = imgBoucle.querySelector('.DownloadZip');  
+const downloadZip = imgBoucle.querySelector('.DownloadZip');
+
 if (downloadZip){
         downloadZip.addEventListener('click', () => {  
         const link = document.createElement('a');  
@@ -163,7 +122,18 @@ if (downloadZip){
         openDwn.click()
         }); 
 } 
+const downloadPdf = imgBoucle.querySelector('.DownloadPdf');
 
+if (downloadPdf){
+    downloadPdf.addEventListener('click', () => {  
+    const link = document.createElement('a');  
+    link.href =img.PdfSrc;  
+    link.download = img.PdfSrc.split('/').pop();  
+    link.click();  
+    const openDwn = imgBoucle.querySelector('.OpenDwn');
+    openDwn.click()
+    }); 
+}
 // VOIR PLUS/MOINS
 
 const VoirPlus=document.getElementById(`${'voirPlus'+index}`)
