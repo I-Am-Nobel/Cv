@@ -85,7 +85,7 @@
             <h1 class="rounded p-3" style="color:#0f2a2b;text-align: center;
            
             font-family: cursive;
-            " >Bienvenue sur mon cv</h1>
+            " >Bienvenue sur mon portfolio</h1>
                 <div class="d-flex"> 
                      
                    <p class="presentation">
@@ -317,7 +317,7 @@
         const date = new Date
         const sec=()=>{return date.getSeconds().toString().length==1? `0${date.getSeconds()}`: date.getSeconds()}
         const min=()=>{return date.getMinutes().toString().length==1? `0${date.getMinutes()}`: date.getMinutes()}
-        const heure=()=>{return date.getHours().toString().length==1? `0${date.getHours()}`: date.getHours()}
+        const heure=()=>{return date.getHours().toString().length==1? `0${date.getHours()+1}`: date.getHours()+1}
         const jours = ()=>{return date.getDate().toString().length==1? `0${date.getDate()}`: date.getDate()}
         const mois =  ()=>{return (date.getMonth()+1).toString().length==1? `0${date.getMonth()+1}`: date.getMonth()+1}
         const annee = date.getFullYear()
