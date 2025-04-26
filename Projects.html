@@ -19,15 +19,88 @@
     </script>
 </head>
 <style>
+    .project-card {
+        background: linear-gradient(145deg, #ffffff, #f3f4f6);
+        border-radius: 15px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+        margin-bottom: 2rem;
+        border: 0.3px solid #ccc;
+    }
 
+    .project-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    }
+
+    .project-header {
+        /* background: linear-gradient(145deg, rgba(96, 230, 6, 0.521), rgba(46, 112, 3, 0.521)); */
+        background-color: rgba(96, 230, 6, 0.521);
+        color: white;
+        border-radius: 15px 15px 0 0;
+        padding: 1rem;
+    }
+
+    .download-menu {
+        background: rgba(248, 249, 250, 0.98);
+        border-radius: 8px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+    }
+
+    .download-item {
+        transition: all 0.2s ease;
+        cursor: pointer;
+        padding: 0.75rem 1rem;
+        border-radius: 6px;
+    }
+
+    .download-item:hover {
+        background-color: #e9ecef;
+    }
+
+    .video-container {
+        border-radius: 8px;
+        overflow: hidden;
+        background: #000;
+    }
+
+    .video-container video {
+        width: 100%;
+        border-radius: 8px;
+    }
+
+    .description {
+        background-color: #f8f9fa;
+        border-radius: 8px;
+        padding: 1rem;
+        margin-top: 1rem;
+    }
+
+    .toggle-btn {
+        color: #0d6efd;
+        cursor: pointer;
+        transition: color 0.2s ease;
+    }
+
+    .toggle-btn:hover {
+        color: #0a58ca;
+    }
+
+    .menu-icon {
+        cursor: pointer;
+        transition: transform 0.3s ease;
+    }
+
+    .menu-icon.active {
+        transform: rotate(180deg);
+    }
 </style>
 <style>
     .voirMoins,.voirPlus{
         cursor: pointer;
     }
-    .Videos{
-        background-color: rgb(0, 93, 199);
-    }
+
     .dwn{
         justify-content: space-between;
     }
@@ -107,32 +180,12 @@
             </a></li>
         </ul>
         </div>
-        <!-- <div
-        class="containeri"
-        > -->
+     
             <h3 style="text-align:center">Projets</h3>
-            <!-- <div
-            style="
-        
-            height: 800 px;
-           "
-        class="rounded containeri bg-success"
-            >  -->
-
-   <div class="mt-2 mb-4 rounded  w-100 d-flex flex-wrap bg-primary justify-content-center"
-   style="  background: radial-gradient(ellipse,#0408ff8e,#fc27015d,#e6ff0281); border: 1px solid #1b2421;"
-   >
-   <div class="" style="width: 100%; color:#ffffff; padding-top: 10px; padding-bottom: 10px;">
-       <h4 style="text-align: center;" >Jo_Nobel <i class="bi bi-file-play-fill"
-        style="color: #ffffff;"
-        ></i> </h4>
-   </div>
-    </div>
-    <div class="Videos rounded  container   d-flex flex-wrap  "
-    style="width: 100%; padding-top: 10px; padding-bottom: 10px; justify-content: center;"
-    >
-        <div></div>
-
+            <h4 style="text-align:center">Voici quelques projets que j'ai réalisés</h4>
+   
+    <div class="container-fluid bg-light py-5">
+        <div class="Videos row g-4"></div>
     </div>
 </body>
 
