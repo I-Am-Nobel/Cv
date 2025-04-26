@@ -16,3 +16,7 @@ Ce repository contient le code source du portfolio de Josué Nobel Musonga, étu
 * CSS3  
 * JavaScript  
 * Bootstrap 4  
+
+git add fichier1 fichier2
+git commit -m "Premier lot de fichiers"
+git push origin main
